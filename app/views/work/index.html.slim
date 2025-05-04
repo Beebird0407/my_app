@@ -1,0 +1,21 @@
+h1 Work#index
+.container
+.row
+.col-md-3.left_controls
+.select_theme
+= render 'work/button_theme_select'
+.col-md-9.image_display
+.row.image
+.col-md-12
+h2.up-theme= @selected_theme
+.col-md-12
+h2.up= @selected_image_name
+.col-md-1.img-left-side
+h3
+i.fa.fa-chevron-circle-left
+.col-md-10.img-center
+img alt="Default Image" src="assets/pictures/1.jpeg"/
+.col-md-1.img-right-side
+h3
+i.fa.fa-chevron-circle-right
+p

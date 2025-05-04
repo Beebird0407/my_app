@@ -31,6 +31,7 @@ gem 'slim-rails'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.x'
 gem 'dartsass-sprockets'
+gem 'sprockets-rails'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

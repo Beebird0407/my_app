@@ -1,0 +1,13 @@
+// 隐藏默认区域
+$('.image_display .image_diag').hide();
+
+// 点击外部关闭表单
+$(document).click(function(e) {
+    if ($(e.target).closest('.select_theme').length === 0) {
+        $('.form_select').hide();
+        $('.select_theme').html('<%= j render "work/button_theme_select" %>');
+    }
+});
+
+// 渲染下拉菜单
+$('.select_theme').html('<%= j render "choose_theme_from_arr" %>');

@@ -1,0 +1,28 @@
+// 更新主题名称
+$('.up-theme').html('<%= @image_data[:theme] %>');
+
+// 更新图片路径
+var path = 'assets/pictures/<%= @image_data[:file] %>';
+$('.img-center img').attr('src', path);
+
+//发送请求
+$.ajax({
+    type: "GET",
+    url: "/api/next_image",
+    data: {
+        index: currentIndex,
+        theme_id: selectedThemeId,
+        length: totalImages
+    },
+    dataType: "json"
+})
+
+//处理响应
+    .done(function(response) {
+        // 更新图片信息
+        $(".img-center img").attr("src", `assets/pictures/${response.file}`);
+        $(".image-name").text(response.name);
+    })
+    .fail(function(error) {
+        console.error("Request failed:", error);
+    });
