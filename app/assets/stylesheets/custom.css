@@ -1,0 +1,13 @@
+/* header */
+header {
+    background: #EFEFEF;
+    padding: 1rem;
+}
+.nav-link { color: white; }
+
+/* footer */
+footer {
+    background: #eee;
+    padding: 1rem;
+    text-align: center;
+}

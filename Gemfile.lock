@@ -119,8 +119,6 @@ GEM
     execjs (2.10.0)
     ffi (1.17.1-x86-mingw32)
     ffi (1.17.1-x86_64-linux-gnu)
-    font-awesome-sass (6.7.2)
-      sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-protobuf (4.30.2-x86-mingw32)
@@ -239,18 +237,10 @@ GEM
       rake (>= 13)
     sass-embedded (1.86.3-x86_64-linux-gnu)
       google-protobuf (~> 4.30)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-embedded (1.80.4)
       sass-embedded (~> 1.80)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     securerandom (0.4.1)
     selenium-webdriver (4.31.0)
       base64 (~> 0.2)
@@ -310,14 +300,12 @@ DEPENDENCIES
   capybara
   dartsass-sprockets
   debug
-  font-awesome-sass
   jbuilder
   jquery-rails
   jsbundling-rails
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)
-  sass-rails
   sassc (~> 2.0)
   selenium-webdriver
   slim-rails
