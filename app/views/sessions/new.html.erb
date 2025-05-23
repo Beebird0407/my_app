@@ -1,0 +1,21 @@
+<!-- app/views/sessions/new.html.erb -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="text-center mb-4">Sign in</h1>
+      <%= form_with(url: signin_path, scope: :session, local: true) do |f| %>
+        <div class="form-group">
+          <%= f.label :email, t('users.form.email') %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password,t('users.form.password') %>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+        <div class="form-group text-center">
+          <%= f.submit t('shared.header.sign_in'), class: "btn btn-primary btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

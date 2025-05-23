@@ -5,6 +5,8 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.enable_reloading = false
+  config.hosts << "your-domain.com"  # 确保域名白名单正确
+  config.asset_host = 'https://your-cdn.com'  # 若有CDN需配置
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

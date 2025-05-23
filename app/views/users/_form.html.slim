@@ -1,18 +1,27 @@
-= form_with(model: user) do |form|
-  - if user.errors.any?
-    div style="color: red"
-      h2 = "#{pluralize(user.errors.count, "error")} prohibited this user from being saved:"
+= form_for @user do |f|
+  - if @user.errors.any?
+    #error_explanation
+      h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
       ul
-        - user.errors.each do |error|
-          li = error.full_message
+        - @user.errors.full_messages.each do |msg|
+          li= msg
 
-  div
-    = form.label :name, style: "display: block"
-    = form.text_field :name
+  .field
+    = f.label t('.name')
+    = f.text_field :name
 
-  div
-    = form.label :email, style: "display: block"
-    = form.text_field :email
+  .field
+    = f.label t('.email')
+    = f.text_field :email
 
-  div
-    = form.submit
+  .field
+    = f.label t('.password')
+    = f.password_field :password
+
+  .field
+    = f.label t('.password_confirmation')
+    = f.password_field :password_confirmation
+
+  .actions
+    / = f.submit 'Save'
+    = f.submit t(".create_account"), class: "btn btn-large btn-primary"

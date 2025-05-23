@@ -83,6 +83,7 @@ GEM
     autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
     bindex (0.8.1)
@@ -114,6 +115,8 @@ GEM
     debug (1.10.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    diff-lcs (1.6.2)
+    docile (1.4.1)
     drb (2.2.1)
     erubi (1.13.1)
     execjs (2.10.0)
@@ -231,6 +234,23 @@ GEM
     reline (0.6.1)
       io-console (~> 0.5)
     rexml (3.4.1)
+    rspec-core (3.13.3)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-rails (6.1.5)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.13)
+      rspec-expectations (~> 3.13)
+      rspec-mocks (~> 3.13)
+      rspec-support (~> 3.13)
+    rspec-support (3.13.3)
     rubyzip (2.4.1)
     sass-embedded (1.86.3)
       google-protobuf (~> 4.30)
@@ -248,6 +268,12 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.1)
+    simplecov_json_formatter (0.1.4)
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
@@ -295,6 +321,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   bootstrap (~> 5.x)
   capybara
@@ -306,8 +333,10 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)
+  rspec-rails (~> 6.0)
   sassc (~> 2.0)
   selenium-webdriver
+  simplecov
   slim-rails
   sprockets-rails
   stimulus-rails

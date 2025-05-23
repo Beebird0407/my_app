@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_04_15_031347) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_21_080532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,28 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_15_031347) do
     t.integer "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.bigint "image_id", null: false
+    t.integer "score", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "rated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.index ["image_id", "user_id"], name: "index_ratings_on_image_id_and_user_id", unique: true
+    t.index ["image_id"], name: "index_ratings_on_image_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer "value"
+    t.bigint "image_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["image_id"], name: "index_scores_on_image_id"
+    t.index ["user_id"], name: "index_scores_on_user_id"
   end
 
   create_table "themes", force: :cascade do |t|
@@ -35,6 +57,10 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_15_031347) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.string "remember_token"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
   create_table "values", force: :cascade do |t|
@@ -45,4 +71,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_15_031347) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "ratings", "images"
+  add_foreign_key "ratings", "users"
+  add_foreign_key "scores", "images"
+  add_foreign_key "scores", "users"
 end

@@ -10,19 +10,16 @@
 Image.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('images')
 Image.create([
-
                {name: 'cat1', file: '1.jpeg', theme_id: 2},
                {name: 'cat2', file: '2.jpeg', theme_id: 2},
                {name: 'cat3', file: '3.jpeg', theme_id: 3},
                {name: 'cat4', file: '4.jpeg', theme_id: 4},
-               {name: 'cat4', file: '5.jpeg', theme_id: 4},
-               {name: 'cat4', file: '6.jpeg', theme_id: 4},
-               {name: 'cat4', file: '7.jpeg', theme_id: 4},
-               {name: 'cat4', file: '8.jpeg', theme_id: 4},
-               {name: 'cat4', file: '9.jpeg', theme_id: 4},
-               {name: 'cat4', file: '10.jpeg', theme_id: 4},
-
-
+               {name: 'cat5', file: '5.jpeg', theme_id: 4},
+               {name: 'cat6', file: '6.jpeg', theme_id: 4},
+               {name: 'cat7', file: '7.jpeg', theme_id: 4},
+               {name: 'cat8', file: '8.jpeg', theme_id: 4},
+               {name: 'cat9', file: '9.jpeg', theme_id: 4},
+               {name: 'cat10', file: '10.jpeg', theme_id: 4},
              ])
 
 Theme.delete_all

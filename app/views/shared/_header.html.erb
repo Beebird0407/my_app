@@ -1,11 +1,40 @@
 <%# app/views/shared/_header.html.erb %>
-<%= link_to "Home", root_path, class: "nav-link" %>
-<header class="main-header">
-  <nav>
-    <ul class="main-menu">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "About", main_about_path %></li>
-      <li><%= link_to "Contacts", main_contacts_path %></li>
+<header class="minimalist-header">
+  <nav class="main-nav">
+    <!-- 首页链接单独成行 -->
+    <div class="home-row">
+      <%= link_to t('shared.header.home'), root_path, class: "home-link" %>
+    </div>
+
+    <!-- 操作链接行 -->
+    <ul class="auth-links">
+      <% if signed_in? %>
+        <li class="nav-item">
+          <%= link_to work_path, class: "nav-link" do %>
+            <i class="fas fa-briefcase"></i><span>Work place</span>
+          <% end %>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="user-menu">
+            <%= gravatar_for(current_user, size: 24, class: "user-avatar") %>
+            <span><%= current_user.name %></span>
+          </a>
+          <ul class="dropdown-content">
+            <li><%= link_to "Personal Data", current_user %></li>
+            <li><%= link_to "Sign out", signout_path, method: :delete %></li>
+          </ul>
+        </li>
+      <% else %>
+        <li class="nav-item"><%= link_to t('shared.header.sign_in'), signin_path, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to t('shared.header.sign_up'), signup_path, class: "nav-link" %></li>
+      <% end %>
     </ul>
+
+    <!-- 语言切换独立区块 -->
+    <div class="locale-switcher">
+      <%= link_to image_tag("Russia.png", alt: t('language.russian'), class: "lang-flag"), { locale: :ru } %>
+      <%= link_to image_tag("United_Kingdom.png", alt: t('language.english'), class: "lang-flag"), { locale: :en } %>
+      <span class="current-lang"><%= I18n.locale.to_s.upcase %></span>
+    </div>
   </nav>
 </header>

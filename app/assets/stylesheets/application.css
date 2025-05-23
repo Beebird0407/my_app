@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+.rating-slider {
+    max-width: 500px;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.rating-slider .slider-input {
+    width: 60%;
+    height: 30px;
+    background: #e9ecef;
+    border-radius: 15px;
+}
+
+.rating-slider .slider-input::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.rating-slider .slider-input::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.rating-slider .slider-value {
+    min-width: 40px;
+    transition: all 0.3s ease;
+}
+
+.ave-rating-form .btn {
+    padding: 0.25rem 0.75rem;
+}

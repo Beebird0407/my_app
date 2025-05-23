@@ -1,0 +1,18 @@
+ru:
+  users:
+    form:
+      name: "Имя:"
+      email: "Электронная почта:"
+      password: "Пароль:"
+      password_confirmation: "Подтверждение пароля:"
+      create_account: "Зарегистрироваться"
+  shared:
+    header:
+      home: "Главная"
+      help: "Помощь"
+      sign_in: "Войти"
+      sign_up: "Зарегистрироваться"
+      sign_out: "Выйти"
+      person: "Я"
+      profile: "Моя страница"
+      settings: "Настройки"

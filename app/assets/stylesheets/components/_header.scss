@@ -1,0 +1,64 @@
+/* app/assets/stylesheets/shared/_header.scss */
+.minimalist-header {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #767676;
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    .home-link {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      transition: opacity 0.3s;
+
+      &:hover { opacity: 0.8; }
+    }
+
+    .auth-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-left: auto;
+
+      .nav-item {
+        position: relative;
+
+        .nav-link {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.8rem 1.2rem;
+          border-radius: 6px;
+
+          &:hover {
+            background: #f8f9fa;
+          }
+        }
+      }
+    }
+
+    .locale-switcher {
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      .lang-flag {
+        width: 24px;
+        height: 16px;
+        border: 1px solid #ddd;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .current-lang {
+        font-weight: 600;
+        color: #34495e;
+      }
+    }
+  }
+}

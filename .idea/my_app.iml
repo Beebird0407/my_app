@@ -42,6 +42,7 @@
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.7, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v10.4.21.0, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="base64 (v0.2.0, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.20, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="benchmark (v0.4.0, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bigdecimal (v3.1.9, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, ruby-3.3.8-p144) [gem]" level="application" />
@@ -56,6 +57,8 @@
     <orderEntry type="library" scope="PROVIDED" name="dartsass-sprockets (v3.2.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.4.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.10.0, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.6.2, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="docile (v1.4.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.10.0, ruby-3.3.8-p144) [gem]" level="application" />
@@ -105,12 +108,20 @@
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.10.0, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.6.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.4.1, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.13.3, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.13.4, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.13.4, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v6.1.5, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.13.3, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.4.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-embedded (v1.86.3, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc-embedded (v1.80.4, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="securerandom (v0.4.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.31.0, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="simplecov (v0.22.0, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="simplecov-html (v0.13.1, ruby-3.3.8-p144) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="simplecov_json_formatter (v0.1.4, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slim (v5.2.1, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slim-rails (v3.7.0, ruby-3.3.8-p144) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.1, ruby-3.3.8-p144) [gem]" level="application" />
@@ -300,6 +311,7 @@
       <value>file://$MODULE_DIR$/../my_app\public/stylesheets</value>
     </entry>
     <entry key="test/mailers/previews">
+      <value>file://$MODULE_DIR$/spec/mailers/previews</value>
       <value>file://$MODULE_DIR$/test/mailers/previews</value>
       <value>file://$MODULE_DIR$/../my_app\test/mailers/previews</value>
     </entry>

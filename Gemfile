@@ -31,15 +31,14 @@ gem 'slim-rails'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.x'
 gem 'dartsass-sprockets'
-gem 'sprockets-rails'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
-
+gem 'simplecov', require: false
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -70,4 +69,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+end
+group :development, :test do
+  gem 'rspec-rails', '~> 6.0'  # 根据需求指定版本
 end

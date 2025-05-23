@@ -1,10 +1,16 @@
-p style="color: green" = notice
+.show_user
+  p style="color: green" = notice
+  == render @user
+  = link_to t('.work'), work_path, class: "btn btn-lg btn-primary"
 
-== render @user
+  div
+    | &nbsp;
+    = link_to "Edit this user", edit_user_path(@user)
+    |  | 
+    = link_to "Back to users", users_path
 
-div
-  => link_to "Edit this user", edit_user_path(@user)
-  '|
-  =< link_to "Back to users", users_path
-
-  = button_to "Destroy this user", @user, method: :delete
+  section.user_info
+    = gravatar_for @user
+    h1= @user.name
+    p= @user.email
+    = button_to "Destroy this user", @user, method: :delete
