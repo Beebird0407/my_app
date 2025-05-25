@@ -11,16 +11,17 @@ div(id="#{dom_id image}")
   p
     strong Theme:
     =< image.theme_id
-  .rating-slider.mb-3
-    = form_with(model: image, class: "ave-rating-form") do |f|
-      .d-flex.align-items-center.gap-3
-        = f.label :ave_value, "Value (0-10):", class: "form-label mb-0"
-        = f.range_field :ave_value,
-                in: 0..10,
-                step: 1,
-                class: "form-range slider-input",
-                data: { target: "aveValue.output" }
-        span.slider-value.badge.bg-primary.fs-6.ms-2[data-slider-target="value"]
-          = image.ave_value || 0
-        = f.submit "Save", class: "btn btn-sm btn-primary ms-3"
 
+  - if controller.controller_name == 'images' && controller.action_name == 'show'
+    .rating-slider.mb-3
+      = form_with(model: image, class: "ave-rating-form") do |f|
+        .d-flex.align-items-center.gap-3
+          = f.label :ave_value, "Value (0-10):", class: "form-label mb-0"
+          = f.range_field :ave_value,
+                  in: 0..10,
+                  step: 1,
+                  class: "form-range slider-input",
+                  data: { target: "aveValue.output" }
+          span.slider-value.badge.bg-primary.fs-6.ms-2[data-slider-target="value"]
+            = image.ave_value || 0
+          = f.submit "Save", class: "btn btn-sm btn-primary ms-3"
